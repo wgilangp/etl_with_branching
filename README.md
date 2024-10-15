@@ -1,7 +1,3 @@
-Here's the updated `README.md` file with the installation process for Docker and Apache Airflow included:
-
----
-
 # ETL with Airflow: Kaggle Dataset Extraction and Loading into SQLite
 
 This repository contains a simple ETL (Extract, Transform, Load) process using Apache Airflow. The workflow extracts data from Kaggle datasets and loads them into an SQLite database. The ETL pipeline is orchestrated using Airflow and Docker.
