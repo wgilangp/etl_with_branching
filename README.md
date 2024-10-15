@@ -1,4 +1,4 @@
-Here's the `README.md` file for your Extract-Load process using Airflow with Kaggle datasets and Docker setup:
+Here's the updated `README.md` file with the installation process for Docker and Apache Airflow included:
 
 ---
 
@@ -32,14 +32,43 @@ Before running this project, ensure you have the following installed:
 
 ### Installation
 
-1. **Clone this repository**:
+1. **Install Docker and Docker Compose**:
+
+   Follow these steps to install Docker and Docker Compose:
+
+   - **For Windows and macOS**:
+     - Download the Docker Desktop installer from [Docker's official website](https://www.docker.com/products/docker-desktop).
+     - Run the installer and follow the on-screen instructions.
+
+   - **For Linux**:
+     ```bash
+     # Update your package index
+     sudo apt-get update
+     
+     # Install Docker
+     sudo apt-get install -y docker.io
+     
+     # Start Docker and enable it to run on startup
+     sudo systemctl start docker
+     sudo systemctl enable docker
+     
+     # Add your user to the Docker group (you might need to log out and back in)
+     sudo usermod -aG docker $USER
+
+     # Install Docker Compose
+     sudo apt-get install -y docker-compose
+     ```
+
+2. **Clone the Airflow Docker repository**:
+
+   Clone the repository that sets up Docker for Apache Airflow:
 
    ```bash
-   git clone https://github.com/yourusername/airflow-kaggle-etl.git
-   cd airflow-kaggle-etl
+   git clone https://github.com/galuhramaditya/docker-airflow-jdk.git airflow
+   cd airflow
    ```
 
-2. **Install dependencies**:
+3. **Install dependencies**:
 
    In your Dockerfile, ensure `kagglehub` is installed:
 
@@ -50,7 +79,7 @@ Before running this project, ensure you have the following installed:
    RUN pip install kagglehub
    ```
 
-3. **Download Datasets**:
+4. **Download Datasets**:
 
    The DAG automatically downloads the datasets using `kagglehub`. No additional setup for Kaggle API keys is required.
 
@@ -94,6 +123,11 @@ This project uses `docker-compose.yaml` to orchestrate Airflow and other service
 - If dataset downloads fail, ensure that the `kagglehub` package is installed correctly in the Docker container.
 
 ### Contributions and Feedback
+
 I welcome and appreciate contributions to this project. If you have any suggestions or improvements, feel free to submit a pull request or contact me directly with any questions or feedback.
 
 #### Thank you for your interest in this project!
+
+### Acknowledgments
+
+Special thanks to my mentor, [Galuhrama Ditya](https://github.com/galuhramaditya), for their guidance and support throughout this project.
