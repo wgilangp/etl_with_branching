@@ -1,6 +1,8 @@
 # ETL with Airflow: Kaggle Dataset Extraction and Loading into SQLite
 
-This repository contains a simple ETL (Extract, Transform, Load) process using Apache Airflow. The workflow extracts data from Kaggle datasets and loads them into an SQLite database. The ETL pipeline is orchestrated using Airflow and Docker.
+This repository contains a simple ETL (Extract, Transform, Load) process using Apache Airflow. The workflow extracts data from Kaggle datasets and loads them into an SQLite database. The ETL pipeline is orchestrated using Airflow and Docker. 
+
+Special thanks to my mentor, [Galuhrama Ditya](https://github.com/galuhramaditya), for the guidance and support throughout this project.
 
 ## Project Overview
 
@@ -123,7 +125,3 @@ This project uses `docker-compose.yaml` to orchestrate Airflow and other service
 I welcome and appreciate contributions to this project. If you have any suggestions or improvements, feel free to submit a pull request or contact me directly with any questions or feedback.
 
 #### Thank you for your interest in this project!
-
-### Acknowledgments
-
-Special thanks to my mentor, [Galuhrama Ditya](https://github.com/galuhramaditya), for their guidance and support throughout this project.
